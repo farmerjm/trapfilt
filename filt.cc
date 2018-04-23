@@ -1,11 +1,3 @@
-/*
-* getFIRfilteredWaveform
-* 
-* perform FIR filtering (trapezoidal filtering) of waveform using an algorithm like that implemented on Struck digitizers
-* 
-* best to pre-allocate an array to hold the filtered waveform values and pass the pointer for that in as firArray
-*/
-
 #include <vector>
 #include <string>
 #include <iostream>
