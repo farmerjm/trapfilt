@@ -1,6 +1,11 @@
 #include <vector>
 #include <deque>
 
+/* Trapezoidal filtering algorithm:  uses two sliding windows to cancel
+ * correlated noise.  Original code by Grayson Rich, modified by J. Farmer
+ *
+ */
+
 std::vector<double>* FIRFilt(std::vector<double>* wave, 
 int peakingTime, int gapTime) {
   const size_t len = wave->size();
