@@ -6,13 +6,14 @@
  *
  */
 
-std::vector<double>* FIRFilt(std::vector<double>* wave, 
+template<class T>
+std::vector<T>* FIRFilt(std::vector<T>* wave, 
 int peakingTime, int gapTime) {
   const size_t len = wave->size();
-  std::deque<double> leadingWindow;
-  std::deque<double> trailingWindow;
+  std::deque<T> leadingWindow;
+  std::deque<T> trailingWindow;
 
-  std::vector<double>* out = new std::vector<double>(len, 0);
+  std::vector<T>* out = new std::vector<double>(len, 0);
 
   int leadIndex_leadWindow = 2 * peakingTime - gapTime;
   int leadIndex_trailingWindow = peakingTime;
